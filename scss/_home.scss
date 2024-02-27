@@ -15,8 +15,8 @@
 
   &__name {
     font-size: 5rem;
-    padding: 1rem;
-    margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     border-bottom: 2px solid set-text-color($primary-color);
 
     &--last {
@@ -25,23 +25,3 @@
     }
   }
 }
-
-@mixin transition-ease {
-  transition: all 0.5s ease-in-out;
-}
-
-/* Checks if our background is light or dark and set's our font color accordingly */
-@function set-text-color($color) {
-  @if(lightness($color) > 40%) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
-
-/*
--Background was too white so we added a linear gradient to add some shadow gradient.
--Nested tags for readability.
--In the mixin we set the transition to be dynamic, it targets any transition and sets a 0.5 ease-in-out.
-  -set the transition to apply to our icon links
-*/

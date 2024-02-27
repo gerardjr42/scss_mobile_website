@@ -3,6 +3,13 @@
   margin: 0;
 }
 
+/* Checks if our background is light or dark and set's our font color accordingly */
+/*
+-Background was too white so we added a linear gradient to add some shadow gradient.
+-Nested tags for readability.
+-In the mixin we set the transition to be dynamic, it targets any transition and sets a 0.5 ease-in-out.
+  -set the transition to apply to our icon links
+*/
 .home {
   height: 100%;
   padding-top: 40vh;
@@ -14,22 +21,15 @@
 }
 .home__name {
   font-size: 5rem;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-bottom: 2px solid set-text-color(#272727);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
 }
 .home__name--last {
   color: #ff652f;
   font-weight: 700;
 }
 
-/* Checks if our background is light or dark and set's our font color accordingly */
-/*
--Background was too white so we added a linear gradient to add some shadow gradient.
--Nested tags for readability.
--In the mixin we set the transition to be dynamic, it targets any transition and sets a 0.5 ease-in-out.
-  -set the transition to apply to our icon links
-*/
 .menu-btn {
   position: absolute;
   z-index: 1;
@@ -120,6 +120,33 @@
 .nav .menu-nav__item.active > a {
   color: #ff652f;
 }
+.nav .menu-nav__link {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav__link:hover {
+  color: #ff652f;
+}
+
+.menu-nav__item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+
+.menu-nav__item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+
+.menu-nav__item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+.menu-nav__item:nth-child(4) {
+  transition-delay: 0.55s;
+}
 
 body {
   background: #272727;
@@ -152,7 +179,7 @@ main {
   width: 100%;
 }
 main .social-icons {
-  position: flex;
+  position: fixed;
   bottom: 1rem;
   left: 1rem;
 }
