@@ -101,7 +101,24 @@
   background: #272727;
   list-style-type: none;
   padding-right: 1rem;
+  /*Position of the menu will start from the top and when clicked it will come from top */
   transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+  /*When opened drop menu downwards to 0 */
+  /*making links come from right to left. Notice how it starts at 100vw(most right) going to most left(0) on the x-axis*/
+}
+.nav .menu-nav.open {
+  transform: translateY(0);
+}
+.nav .menu-nav__item {
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav__item.open {
+  transform: translateX(0);
+}
+.nav .menu-nav__item.active > a {
+  color: #ff652f;
 }
 
 body {
