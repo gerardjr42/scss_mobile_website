@@ -53,4 +53,16 @@
       }
     }
   }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*Makes footer flipped sideways*/
+  footer {
+    transform: 
+      rotate(90deg)
+      translate(-3rem, -5rem);
+  }
 }

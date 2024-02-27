@@ -150,6 +150,7 @@
 
 .about {
   padding-bottom: 2rem;
+  /*Makes footer flipped sideways*/
 }
 .about__bio-image {
   height: 50vh;
@@ -189,6 +190,13 @@
 }
 .about .jobs__job h6 {
   margin: 0.3rem 0;
+}
+.about .social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.about footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
 body {
