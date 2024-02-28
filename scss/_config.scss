@@ -19,9 +19,30 @@ $secondary-color: #ff652f;
   }
 }
 
+@mixin media-md {
+  @media screen and (min-width: 768px){
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px){
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1600px){
+    @content;
+  }
+}
+
 /*
 -Background was too white so we added a linear gradient to add some shadow gradient.
 -Nested tags for readability.
 -In the mixin we set the transition to be dynamic, it targets any transition and sets a 0.5 ease-in-out.
   -set the transition to apply to our icon links
+
+
+-In mixin media, we created a query for sizes depending on screen size
 */
